@@ -5,7 +5,7 @@ test.describe("Login", () => {
     await loginPage.open();
   });
 
-  test("Stanard user can login", async ({ loginPage, inventoryPage, page }) => {
+  test("Standard user can login", async ({ loginPage, inventoryPage, page }) => {
     await loginPage.login(users.standard.username, users.standard.password);
     await expect(page).toHaveURL(/inventory/);
     await expect(inventoryPage.title).toHaveText("Products");
